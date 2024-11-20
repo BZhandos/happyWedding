@@ -1,13 +1,12 @@
-<script setup>
-
-</script>
+<script setup></script>
 
 <template>
+  <div>schedule block</div>
   <div>
-      schedule block
+    <div>sbor</div>
+    <div>rega</div>
+    <div>banket</div>
   </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
