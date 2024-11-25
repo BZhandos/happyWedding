@@ -1,7 +1,13 @@
 <script setup></script>
 
 <template>
-  <div>NOT FOR PARENTS AdressBlock block</div>
+  <div class="links-title">Links</div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.links-title {
+  text-align: center;
+  font-size: 4rem;
+  margin-top: 40px;
+}
+</style>

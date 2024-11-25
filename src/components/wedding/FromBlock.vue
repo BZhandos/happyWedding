@@ -17,7 +17,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="form-title">Заполните пож-а анкету</div>
+  <div class="form-title">Анкета гостя</div>
   <div>
     <div class="g-form">
       <!--      <iframe-->
