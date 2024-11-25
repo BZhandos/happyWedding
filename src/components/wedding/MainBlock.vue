@@ -14,12 +14,18 @@ const guest = computed(() => {
 })
 
 const isPlaying = ref(false)
+const counter = ref(0)
 
 const audio = new Audio(audioFile)
 
 function playMusicHandler() {
+  counter.value++
   isPlaying.value = true
   audio.play()
+  if (counter.value > 5) {
+    alert('Stop clicking')
+    counter.value = 0
+  }
 }
 function stopMusicHandler() {
   isPlaying.value = false
@@ -48,9 +54,7 @@ function stopMusicHandler() {
           src="@/assets/img/song_pause.svg"
         />
         <div>
-          Zhandos <br />
-          & <br />
-          Zhadyra
+          <img alt="img" class="" src="@/assets/img/names.svg" />
         </div>
         <div>3 | MAY | 2025</div>
       </div>

@@ -1,13 +1,7 @@
-<script setup>
-
-</script>
+<script setup></script>
 
 <template>
-  <div>
-      AdressBlock block
-  </div>
+  <div>NOT FOR PARENTS AdressBlock block</div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
