@@ -57,13 +57,7 @@
   display: block; /* Ensure it takes its natural dimensions */
   width: 100%; /* Optional: Set width if you want responsiveness */
   height: auto; /* Maintain aspect ratio */
-  animation: spin 99s linear infinite;
-}
-.delay1 {
-  animation-delay: 5s;
-}
-.delay2 {
-  animation-delay: 10s;
+  animation: swing 99s linear infinite;
 }
 
 .plan-icon__img {
@@ -78,12 +72,16 @@
   border-radius: 50%;
   border: 4px solid #ede7e3;
 }
-@keyframes spin {
-  from {
-    transform: rotate(0deg); /* Start at 0 degrees */
+
+@keyframes swing {
+  0% {
+    transform: rotate(-30deg); /* Start at -30 degrees */
   }
-  to {
-    transform: rotate(360deg); /* Complete one full rotation */
+  50% {
+    transform: rotate(30deg); /* Swing to 30 degrees */
+  }
+  100% {
+    transform: rotate(-30deg); /* Swing back to -30 degrees */
   }
 }
 .plan-box__title {
