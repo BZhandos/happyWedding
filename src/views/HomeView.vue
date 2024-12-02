@@ -14,7 +14,7 @@ import AddressBlock from '@/components/wedding/AddressBlock.vue'
   <schedule-block />
   <dress-code />
   <rules-block />
-  <gift-block />
+
   <from-block />
   <count-down />
   <address-block />

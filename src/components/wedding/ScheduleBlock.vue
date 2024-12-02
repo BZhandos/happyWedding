@@ -51,43 +51,44 @@
 <style scoped>
 .schedule-container {
   position: relative;
+  overflow: hidden;
 }
 .corner-image {
-  position: absolute; /* Positions the images relative to the container */
-  max-width: 460px; /* Adjust image size as needed */
-  height: auto; /* Maintain aspect ratio */
+  position: absolute;
+  max-width: 460px;
+  height: auto;
   z-index: -1;
 }
 
 .corner-image.left {
-  top: 10px; /* Position from the top */
-  left: -150px; /* Position from the left */
+  top: 10px;
+  left: -150px;
 }
 
 .corner-image.right {
-  top: 10px; /* Position from the top */
-  right: -200px; /* Position from the right */
+  top: 10px;
+  right: -200px;
   transform: rotate(30deg);
 }
 .chisai {
   max-width: 150px;
 }
 .corner-image.left2 {
-  top: 150px; /* Position from the top */
-  left: -50px; /* Position from the left */
+  top: 150px;
+  left: -50px;
   transform: rotate(30deg);
 }
 
 .corner-image.right2 {
-  top: 150px; /* Position from the top */
-  right: -10px; /* Position from the right */
+  top: 150px;
+  right: -10px;
 }
 @media (max-width: 1024px) {
   .corner-image.right {
-    top: 240px; /* Position from the top */
+    top: 240px;
   }
   .corner-image.right2 {
-    top: 350px; /* Position from the top */
+    top: 350px;
   }
 }
 @media (max-width: 431px) {

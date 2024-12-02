@@ -37,6 +37,7 @@
   text-align: center;
   max-width: 520px;
   margin: 0 auto;
+  padding: 0 10px;
 }
 .code-wrap {
   display: flex;
