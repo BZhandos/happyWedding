@@ -39,24 +39,24 @@ function stopMusicHandler() {
       <img alt="img" width="265" src="@/assets/text/our_wedding.svg" />
     </div>
     <div class="main-box">
-      <img alt="img" class="main-box__img" src="@/assets/img/mainFram.png" />
+      <img alt="img" class="main-box__img" src="@/assets/img/mr2.png" />
+      <img
+        v-if="!isPlaying"
+        @click="playMusicHandler"
+        alt="img"
+        class="main-box__song"
+        src="@/assets/img/song_img.svg"
+      />
+      <img
+        v-else
+        @click="stopMusicHandler"
+        alt="img"
+        class="main-box__song"
+        src="@/assets/img/song_pause.svg"
+      />
       <div class="main-box__title">
-        <img
-          v-if="!isPlaying"
-          @click="playMusicHandler"
-          alt="img"
-          class="main-box__song"
-          src="@/assets/img/song_img.svg"
-        />
-        <img
-          v-else
-          @click="stopMusicHandler"
-          alt="img"
-          class="main-box__song"
-          src="@/assets/img/song_pause.svg"
-        />
         <div>
-          <img alt="img" class="" src="@/assets/img/names.svg" />
+          <img alt="img" class="main-box__names" src="@/assets/img/names2.svg" />
         </div>
         <div>3 | MAY | 2025</div>
       </div>
@@ -111,16 +111,15 @@ function stopMusicHandler() {
 }
 .main-box__song {
   position: absolute;
-  top: -100px;
-  left: 25px;
+  top: 50%;
+  left: 50%;
   cursor: pointer;
   animation: pulsing 0.8s infinite linear;
-  backface-visibility: hidden;
+}
+.main-box__names {
+  width: 200px;
 }
 @media (max-width: 740px) {
-  .main-box__song {
-    top: -80px;
-  }
 }
 .main-box__img {
   max-width: 800px;
@@ -129,7 +128,7 @@ function stopMusicHandler() {
 .main-box__title {
   position: absolute;
   top: 50%;
-  left: 48%;
+  left: 50%;
   transform: translate(-50%, -50%);
   color: black;
   padding: 10px 20px;

@@ -11,7 +11,9 @@
           <img class="plan-icon__bg" alt="img" src="@/assets/planning/planning-flowers.png" />
           <img class="plan-icon__img" alt="img" src="@/assets/planning/_1.png" />
         </div>
-        <div class="plan-box__title">Сбор гостей</div>
+        <div class="plan-box__title">
+          <img alt="img" width="211" src="@/assets/text/guest.svg" />
+        </div>
         <div class="plan-box__dec">Japan, Tokyo, Roppongi-ku</div>
         <div class="plan-box__time">14:30-15:00</div>
       </div>
@@ -24,7 +26,9 @@
           />
           <img class="plan-icon__img" alt="img" src="@/assets/planning/_2.png" />
         </div>
-        <div class="plan-box__title">Регистрация</div>
+        <div class="plan-box__title">
+          <img alt="img" width="211" src="@/assets/text/reg.svg" />
+        </div>
         <div class="plan-box__dec">Roof</div>
         <div class="plan-box__time">15:30-16:30</div>
       </div>
@@ -37,7 +41,9 @@
           />
           <img class="plan-icon__img" alt="img" src="@/assets/planning/_3.png" />
         </div>
-        <div class="plan-box__title">Банкет</div>
+        <div class="plan-box__title">
+          <img alt="img" width="140" src="@/assets/text/banket.svg" />
+        </div>
         <div class="plan-box__dec">Main Hall under Sakura Tree</div>
         <div class="plan-box__time">16:30-21:00</div>
       </div>
