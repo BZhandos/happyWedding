@@ -2,7 +2,9 @@
 
 <template>
   <div class="schedule-container">
-    <div class="schedule-title">Расписание</div>
+    <div class="schedule-title">
+      <img alt="img" width="265" src="@/assets/text/schedule.svg" />
+    </div>
     <div class="plan-box">
       <div class="plan-box__item">
         <div class="plan-icon">

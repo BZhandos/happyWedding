@@ -35,7 +35,9 @@ function stopMusicHandler() {
 
 <template>
   <div class="main-block">
-    <div class="main-block__header">Our wedding</div>
+    <div class="main-block__header">
+      <img alt="img" width="265" src="@/assets/text/our_wedding.svg" />
+    </div>
     <div class="main-box">
       <img alt="img" class="main-box__img" src="@/assets/img/mainFram.png" />
       <div class="main-box__title">
@@ -98,7 +100,7 @@ function stopMusicHandler() {
   background-image: url('@/assets/img/text-bg1.png'); /* Replace with your image URL */
   background-size: cover; /* Ensures the image covers the entire div */
   background-position: center; /* Centers the image */
-  opacity: 0.4; /* Adjust opacity as needed */
+  opacity: 0.2; /* Adjust opacity as needed */
   z-index: -1; /* Places the background behind the text */
 }
 .main-box {

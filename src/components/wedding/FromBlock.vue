@@ -17,7 +17,9 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="form-title">Анкета гостя</div>
+  <div class="form-title">
+    <img alt="img" width="320" src="@/assets/text/form.svg" />
+  </div>
   <div>
     <div class="g-form">
       <!--      <iframe-->

@@ -2,7 +2,9 @@
 
 <template>
   <div class="details-container">
-    <div class="details-title">Детали</div>
+    <div class="details-title">
+      <img alt="img" width="265" src="@/assets/text/details.svg" />
+    </div>
     <div class="details-desc">
       Мы от всего сердца просим воздержаться от традиционных криков "Горько" и поддержать атмосферу
       уютного семейного таинства, как это принято в Японии.

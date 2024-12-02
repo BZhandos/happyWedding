@@ -46,7 +46,9 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div class="count-title">До свадьбы осталось</div>
+  <div class="count-title">
+    <img alt="img" width="320" src="@/assets/text/countdown.svg" />
+  </div>
   <div class="countdown-timer">
     <div class="countdown-timer__item">
       <span>{{ timeLeft.days }}</span> days
@@ -74,6 +76,7 @@ onBeforeUnmount(() => {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  padding: 0 7px;
 }
 
 .countdown-timer__item {

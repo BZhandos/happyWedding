@@ -1,7 +1,9 @@
 <script setup></script>
 
 <template>
-  <div class="code-title">Dress code</div>
+  <div class="code-title">
+    <img alt="img" width="265" src="@/assets/text/dress.svg" />
+  </div>
   <div class="code-desc">Для нас главное - Ваше присутствие!</div>
   <div class="code-desc">
     Но нам будет приятно, если Вы поддержите цветовую гамму нашего торжества!
