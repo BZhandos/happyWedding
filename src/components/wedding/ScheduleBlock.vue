@@ -1,39 +1,103 @@
 <script setup></script>
 
 <template>
-  <div class="schedule-title">Расписание</div>
-  <div class="plan-box">
-    <div class="plan-box__item">
-      <div class="plan-icon">
-        <img class="plan-icon__bg" alt="img" src="@/assets/planning/planning-flowers.png" />
-        <img class="plan-icon__img" alt="img" src="@/assets/planning/_1.png" />
+  <div class="schedule-container">
+    <div class="schedule-title">Расписание</div>
+    <div class="plan-box">
+      <div class="plan-box__item">
+        <div class="plan-icon">
+          <img class="plan-icon__bg" alt="img" src="@/assets/planning/planning-flowers.png" />
+          <img class="plan-icon__img" alt="img" src="@/assets/planning/_1.png" />
+        </div>
+        <div class="plan-box__title">Сбор гостей</div>
+        <div class="plan-box__dec">Japan, Tokyo, Roppongi-ku</div>
+        <div class="plan-box__time">14:30-15:00</div>
       </div>
-      <div class="plan-box__title">Сбор гостей</div>
-      <div class="plan-box__dec">Japan, Tokyo, Roppongi-ku</div>
-      <div class="plan-box__time">14:30-15:00</div>
-    </div>
-    <div>
-      <div class="plan-icon">
-        <img class="plan-icon__bg delay1" alt="img" src="@/assets/planning/planning-flowers.png" />
-        <img class="plan-icon__img" alt="img" src="@/assets/planning/_2.png" />
+      <div>
+        <div class="plan-icon">
+          <img
+            class="plan-icon__bg delay1"
+            alt="img"
+            src="@/assets/planning/planning-flowers.png"
+          />
+          <img class="plan-icon__img" alt="img" src="@/assets/planning/_2.png" />
+        </div>
+        <div class="plan-box__title">Регистрация</div>
+        <div class="plan-box__dec">Roof</div>
+        <div class="plan-box__time">15:30-16:30</div>
       </div>
-      <div class="plan-box__title">Регистрация</div>
-      <div class="plan-box__dec">Roof</div>
-      <div class="plan-box__time">15:30-16:30</div>
-    </div>
-    <div>
-      <div class="plan-icon">
-        <img class="plan-icon__bg delay2" alt="img" src="@/assets/planning/planning-flowers.png" />
-        <img class="plan-icon__img" alt="img" src="@/assets/planning/_3.png" />
+      <div>
+        <div class="plan-icon">
+          <img
+            class="plan-icon__bg delay2"
+            alt="img"
+            src="@/assets/planning/planning-flowers.png"
+          />
+          <img class="plan-icon__img" alt="img" src="@/assets/planning/_3.png" />
+        </div>
+        <div class="plan-box__title">Банкет</div>
+        <div class="plan-box__dec">Main Hall under Sakura Tree</div>
+        <div class="plan-box__time">16:30-21:00</div>
       </div>
-      <div class="plan-box__title">Банкет</div>
-      <div class="plan-box__dec">Main Hall under Sakura Tree</div>
-      <div class="plan-box__time">16:30-21:00</div>
     </div>
+    <img src="@/assets/img/text-bg2.png" alt="Left Corner" class="corner-image left" />
+    <img src="@/assets/img/text-bg3.png" alt="Left Corner" class="corner-image left2 chisai" />
+
+    <img src="@/assets/img/text-bg2.png" alt="Right Corner" class="corner-image right" />
+    <img src="@/assets/img/text-bg1.png" alt="Right Corner" class="corner-image right2 chisai" />
   </div>
 </template>
 
 <style scoped>
+.schedule-container {
+  position: relative;
+}
+.corner-image {
+  position: absolute; /* Positions the images relative to the container */
+  max-width: 460px; /* Adjust image size as needed */
+  height: auto; /* Maintain aspect ratio */
+  z-index: -1;
+}
+
+.corner-image.left {
+  top: 10px; /* Position from the top */
+  left: -150px; /* Position from the left */
+}
+
+.corner-image.right {
+  top: 10px; /* Position from the top */
+  right: -200px; /* Position from the right */
+  transform: rotate(30deg);
+}
+.chisai {
+  max-width: 150px;
+}
+.corner-image.left2 {
+  top: 150px; /* Position from the top */
+  left: -50px; /* Position from the left */
+  transform: rotate(30deg);
+}
+
+.corner-image.right2 {
+  top: 150px; /* Position from the top */
+  right: -10px; /* Position from the right */
+}
+@media (max-width: 1024px) {
+  .corner-image.right {
+    top: 240px; /* Position from the top */
+  }
+  .corner-image.right2 {
+    top: 350px; /* Position from the top */
+  }
+}
+@media (max-width: 431px) {
+  .corner-image.right2 {
+    top: 550px;
+  }
+  .corner-image.right {
+    top: 550px;
+  }
+}
 .schedule-title {
   text-align: center;
   font-size: 4rem;
