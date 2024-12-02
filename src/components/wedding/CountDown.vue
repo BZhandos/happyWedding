@@ -84,7 +84,6 @@ onBeforeUnmount(() => {
   flex-direction: column;
   align-items: center;
   font-size: 12px;
-  font-weight: bold;
   border: 1px solid #403f3f;
   border-radius: 8px;
   padding: 12px;
@@ -94,5 +93,6 @@ onBeforeUnmount(() => {
 .countdown-timer__item span {
   font-size: 36px;
   color: #403f3f;
+  font-weight: bold;
 }
 </style>
