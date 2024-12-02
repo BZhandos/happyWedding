@@ -65,8 +65,11 @@ function stopMusicHandler() {
     <!--    </div>-->
 
     <div class="main-block__desc">
-      {{ guest.name }}
-      この日、私たちの人生で最高で最も感動的な日の喜びを、皆さんと一緒に分かち合いたいと思います。
+      <div class="background-image"></div>
+      <div class="main-block__desc">
+        {{ guest.name }}
+        この日、私たちの人生で最高で最も感動的な日の喜びを、皆さんと一緒に分かち合いたいと思います。
+      </div>
     </div>
   </div>
 </template>
@@ -85,6 +88,18 @@ function stopMusicHandler() {
   text-align: center;
   font-size: 22px;
   max-width: 320px;
+}
+.background-image {
+  position: absolute; /* Position the image relative to .text-overlay */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('@/assets/img/text-bg1.png'); /* Replace with your image URL */
+  background-size: cover; /* Ensures the image covers the entire div */
+  background-position: center; /* Centers the image */
+  opacity: 0.4; /* Adjust opacity as needed */
+  z-index: -1; /* Places the background behind the text */
 }
 .main-box {
   position: relative;
