@@ -15,17 +15,20 @@ const guest = computed(() => {
 
 const isPlaying = ref(false)
 const counter = ref(0)
-
-const audio = new Audio(audioFile)
+const audio = new Audio(
+  'https://amplify-photobank-dev-173022-deployment.s3.us-east-1.amazonaws.com/song.mp3'
+)
 
 function playMusicHandler() {
-  counter.value++
+  audio.loop = true
   isPlaying.value = true
   audio.play()
-  if (counter.value > 5) {
-    alert('Stop clicking')
-    counter.value = 0
-  }
+
+  counter.value++
+  // if (counter.value > 5) {
+  //   alert('Stop clicking')
+  //   counter.value = 0
+  // }
 }
 function stopMusicHandler() {
   isPlaying.value = false
