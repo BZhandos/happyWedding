@@ -71,10 +71,14 @@ function stopMusicHandler() {
 
     <div class="main-block__desc">
       <div class="background-image"></div>
-      <div class="main-block__desc">
+      <div class="main-block__desc" v-if="guest.hash !== 'haba-san' && guest.hash !== 'aikawa-san'">
         {{ guest.name }}
         Приглашаем вас на наше свадебное мероприятие разделить радость этого дня вместе с нами. We
         invite you to our wedding event to share the joy of this day with us.
+      </div>
+      <div class="main-block__desc" v-else>
+        {{ guest.name }}
+        We invite you to our wedding event to share the joy of this day with us.
       </div>
     </div>
   </div>

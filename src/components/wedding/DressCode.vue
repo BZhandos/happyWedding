@@ -1,15 +1,30 @@
-<script setup></script>
+<script setup>
+import { computed } from 'vue'
+import { useMainStore } from '@/stores/guests.js'
+const store = useMainStore()
+
+const guest = computed(() => {
+  return store.currentGuest
+})
+</script>
 
 <template>
   <div class="code-title">
     <img alt="img" width="265" src="@/assets/text/dress.svg" />
   </div>
-  <div class="code-desc">Для нас главное - Ваше присутствие!</div>
-  <div class="code-desc">
-    Но нам будет приятно, если Вы поддержите цветовую гамму нашего торжества! The most important
-    thing for us is your presence! But we will be pleased if you support the color scheme of our
-    celebration!
-  </div>
+  <template v-if="guest.hash !== 'haba-san' && guest.hash !== 'aikawa-san'">
+    <div class="code-desc">Для нас главное - Ваше присутствие!</div>
+    <div class="code-desc">
+      Но нам будет приятно, если Вы поддержите цветовую гамму нашего торжества!
+    </div>
+  </template>
+  <template v-else>
+    <div class="code-desc">The most important thing for us is your presence!</div>
+    <div class="code-desc">
+      But we will be pleased if you support the color scheme of our celebration!
+    </div>
+  </template>
+
   <div class="code-wrap">
     <div class="code-icon">
       <img class="code-icon__bg" alt="img" src="@/assets/planning/planning-flowers.png" />

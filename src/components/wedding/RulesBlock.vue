@@ -14,11 +14,9 @@ const guest = computed(() => {
       <img alt="img" width="265" src="@/assets/text/details.svg" />
     </div>
     <div class="details-desc">
-      <div>remove for japanese</div>
       Мы просим воздержаться от громких оваций и поддержать атмосферу уютного семейного таинства,
       как это принято в Японии.
     </div>
-    <div>remove for japanese</div>
     <div class="gift-title">Подарки</div>
     <div class="gift-desc">Пожалуйста, воздержитесь от дарения цветов или других вещей.</div>
     <div class="gift-desc">
