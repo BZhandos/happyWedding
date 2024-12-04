@@ -6,7 +6,9 @@
   </div>
   <div class="code-desc">Для нас главное - Ваше присутствие!</div>
   <div class="code-desc">
-    Но нам будет приятно, если Вы поддержите цветовую гамму нашего торжества!
+    Но нам будет приятно, если Вы поддержите цветовую гамму нашего торжества! The most important
+    thing for us is your presence! But we will be pleased if you support the color scheme of our
+    celebration!
   </div>
   <div class="code-wrap">
     <div class="code-icon">

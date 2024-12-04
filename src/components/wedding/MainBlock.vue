@@ -42,9 +42,6 @@ function stopMusicHandler() {
 
 <template>
   <div class="main-block">
-    <div class="main-block__header">
-      <img alt="img" width="265" src="@/assets/text/our_wedding.svg" />
-    </div>
     <div class="main-box">
       <picture>
         <source srcset="@/assets/img/mainfram-mob.png" media="(max-width: 700px)" />
@@ -68,19 +65,16 @@ function stopMusicHandler() {
         <div>
           <img alt="img" class="main-box__names" src="@/assets/img/names2.svg" />
         </div>
-        <div>3 | MAY | 2025</div>
+        <div class="main-box__date">3 | May | 2025</div>
       </div>
     </div>
-    <!--    <div class="main-block__desc">-->
-    <!--      On this day we would like to invite you to share with us the joy of the best and most touching-->
-    <!--      day of our lives!-->
-    <!--    </div>-->
 
     <div class="main-block__desc">
       <div class="background-image"></div>
       <div class="main-block__desc">
         {{ guest.name }}
-        この日、私たちの人生で最高で最も感動的な日の喜びを、皆さんと一緒に分かち合いたいと思います。
+        Приглашаем вас на наше свадебное мероприятие разделить радость этого дня вместе с нами. We
+        invite you to our wedding event to share the joy of this day with us.
       </div>
     </div>
   </div>
@@ -129,6 +123,10 @@ function stopMusicHandler() {
 .main-box__names {
   width: 200px;
 }
+.main-box__date {
+  color: #565452;
+}
+
 @media (max-width: 740px) {
   .main-box__names {
     max-width: 170px;

@@ -1,4 +1,10 @@
-<script setup></script>
+<script setup>
+const goToGoogleMap = () => {
+  const address =
+    'https://www.google.com/maps/place/Palazzo+Ducale+Azabu/@35.6642886,139.7299422,17z/data=!3m1!4b1!4m6!3m5!1s0x60188b78979ae66d:0x6a1186edb573ea50!8m2!3d35.6642886!4d139.7299422!16s%2Fg%2F1tk1z0jh?entry=ttu&g_ep=EgoyMDI0MTIwMS4xIKXMDSoASAFQAw%3D%3D'
+  window.open(address, '_blank')
+}
+</script>
 
 <template>
   <div class="schedule-container">
@@ -14,7 +20,7 @@
         <div class="plan-box__title">
           <img alt="img" width="211" src="@/assets/text/guest.svg" />
         </div>
-        <div class="plan-box__dec">Japan, Tokyo, Roppongi-ku</div>
+        <div class="plan-box__dec" @click="goToGoogleMap">Japan, Tokyo, Roppongi-ku</div>
         <div class="plan-box__time">14:30-15:00</div>
       </div>
       <div>
@@ -29,7 +35,7 @@
         <div class="plan-box__title">
           <img alt="img" width="211" src="@/assets/text/reg.svg" />
         </div>
-        <div class="plan-box__dec">Roof</div>
+        <div class="plan-box__dec">Terrace</div>
         <div class="plan-box__time">15:30-16:30</div>
       </div>
       <div>
@@ -168,5 +174,13 @@
 .plan-box__time {
   color: rgb(216, 167, 75);
   font-size: 14px;
+}
+@media (max-width: 431px) {
+  .plan-box {
+    gap: 20px;
+  }
+  .plan-box__title {
+    margin: unset;
+  }
 }
 </style>

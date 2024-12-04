@@ -17,5 +17,5 @@ import AddressBlock from '@/components/wedding/AddressBlock.vue'
 
   <from-block />
   <count-down />
-  <address-block />
+  <!--  <address-block />-->
 </template>

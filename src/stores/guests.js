@@ -2,12 +2,12 @@ import { defineStore } from 'pinia'
 
 const GUESTS = {
   'aikawa-san': {
-    name: 'Masayuki Aikawa',
+    name: 'Dear Masayuki Aikawa!',
     plus1: '-',
-    hash: 'aikawa-sensei'
+    hash: 'aikawa-san'
   },
   'haba-san': {
-    name: 'Haba Hiromitsu',
+    name: 'Dear Haba Hiromitsu!',
     plus1: '-',
     hash: 'haba-san'
   },
