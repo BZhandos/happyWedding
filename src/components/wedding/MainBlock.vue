@@ -1,6 +1,5 @@
 <script setup>
-import { ref, computed } from 'vue'
-import audioFile from '@/assets/song.mp3'
+import { ref, computed, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { useMainStore } from '@/stores/guests'
 
@@ -10,7 +9,12 @@ const store = useMainStore()
 const guestHash = computed(() => route.params?.hash)
 
 const guest = computed(() => {
-  return store.guestList[guestHash.value]
+  return store.currentGuest
+})
+
+onMounted(() => {
+  const guest = store.guestList[guestHash.value]
+  store.setGuest(guest)
 })
 
 const isPlaying = ref(false)
@@ -42,7 +46,10 @@ function stopMusicHandler() {
       <img alt="img" width="265" src="@/assets/text/our_wedding.svg" />
     </div>
     <div class="main-box">
-      <img alt="img" class="main-box__img" src="@/assets/img/mr2.png" />
+      <picture>
+        <source srcset="@/assets/img/mainfram-mob.png" media="(max-width: 700px)" />
+        <img alt="img" class="main-box__img" src="@/assets/img/mr2.png" />
+      </picture>
       <img
         v-if="!isPlaying"
         @click="playMusicHandler"
@@ -95,16 +102,16 @@ function stopMusicHandler() {
   max-width: 320px;
 }
 .background-image {
-  position: absolute; /* Position the image relative to .text-overlay */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('@/assets/img/text-bg1.png'); /* Replace with your image URL */
-  background-size: cover; /* Ensures the image covers the entire div */
-  background-position: center; /* Centers the image */
-  opacity: 0.2; /* Adjust opacity as needed */
-  z-index: -1; /* Places the background behind the text */
+  background-image: url('@/assets/img/text-bg1.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  z-index: -1;
 }
 .main-box {
   position: relative;
@@ -123,6 +130,9 @@ function stopMusicHandler() {
   width: 200px;
 }
 @media (max-width: 740px) {
+  .main-box__names {
+    max-width: 170px;
+  }
 }
 .main-box__img {
   max-width: 800px;

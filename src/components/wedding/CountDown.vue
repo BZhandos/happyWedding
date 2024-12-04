@@ -26,42 +26,46 @@ const calculateTimeLeft = () => {
     return
   }
 
-  // Calculate days, hours, minutes, and seconds
   timeLeft.value.days = Math.floor(diff / (1000 * 60 * 60 * 24))
   timeLeft.value.hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
   timeLeft.value.minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))
   timeLeft.value.seconds = Math.floor((diff % (1000 * 60)) / 1000)
 }
 
-// Start the countdown timer
 onMounted(() => {
   calculateTimeLeft()
   timerInterval = setInterval(calculateTimeLeft, 1000)
 })
 
-// Cleanup the interval on unmount
 onBeforeUnmount(() => {
   clearInterval(timerInterval)
 })
 </script>
 
 <template>
-  <div class="count-title">
-    <img alt="img" width="320" src="@/assets/text/countdown.svg" />
-  </div>
-  <div class="countdown-timer">
-    <div class="countdown-timer__item">
-      <span>{{ timeLeft.days }}</span> days
+  <div class="countdown-wrapper">
+    <div class="count-title">
+      <img alt="img" width="320" src="@/assets/text/countdown.svg" />
     </div>
-    <div class="countdown-timer__item">
-      <span>{{ timeLeft.hours }}</span> hours
+    <div class="countdown-timer">
+      <div class="countdown-timer__item">
+        <span>{{ timeLeft.days }}</span> days
+      </div>
+      <div class="countdown-timer__item">
+        <span>{{ timeLeft.hours }}</span> hours
+      </div>
+      <div class="countdown-timer__item">
+        <span>{{ timeLeft.minutes }}</span> minutes
+      </div>
+      <div class="countdown-timer__item">
+        <span>{{ timeLeft.seconds }}</span> seconds
+      </div>
     </div>
-    <div class="countdown-timer__item">
-      <span>{{ timeLeft.minutes }}</span> minutes
+    <div class="count-footer">
+      <img alt="img" src="@/assets/text/welcome_text.svg" />
     </div>
-    <div class="countdown-timer__item">
-      <span>{{ timeLeft.seconds }}</span> seconds
-    </div>
+    <img src="@/assets/img/text-bg1.png" alt="Left Corner" class="countdown-wrapper-img left1" />
+    <img src="@/assets/img/text-bg1.png" alt="Right Corner" class="countdown-wrapper-img right1" />
   </div>
 </template>
 
@@ -70,6 +74,15 @@ onBeforeUnmount(() => {
   text-align: center;
   font-size: 4rem;
   margin-top: 40px;
+}
+.count-footer {
+  text-align: center;
+  padding: 30px;
+}
+
+.count-footer img {
+  max-width: 520px;
+  width: 100%;
 }
 .countdown-timer {
   display: flex;
@@ -94,5 +107,35 @@ onBeforeUnmount(() => {
   font-size: 36px;
   color: #403f3f;
   font-weight: bold;
+}
+.countdown-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.countdown-wrapper-img {
+  position: absolute;
+  max-width: 360px;
+  height: auto;
+  z-index: -1;
+}
+.countdown-wrapper-img.left1 {
+  bottom: 0;
+  left: -50px;
+}
+
+.countdown-wrapper-img.right1 {
+  bottom: 0;
+  right: -10px;
+  transform: scaleX(-1);
+}
+@media (max-width: 1024px) {
+  .countdown-wrapper-img {
+    opacity: 0.4;
+  }
+}
+@media (max-width: 500px) {
+  .countdown-wrapper-img.right1 {
+    display: none;
+  }
 }
 </style>

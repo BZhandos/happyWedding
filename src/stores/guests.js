@@ -9,7 +9,12 @@ const GUESTS = {
   'haba-san': {
     name: 'Haba Hiromitsu',
     plus1: '-',
-    hash: 'aikawa-sensei'
+    hash: 'haba-san'
+  },
+  'mama-papa': {
+    name: 'Мурат и Мира',
+    plus1: '-',
+    hash: 'parents1'
   }
 }
 //     [
@@ -42,6 +47,12 @@ const GUESTS = {
 
 export const useMainStore = defineStore('main', {
   state: () => ({
-    guestList: GUESTS
-  })
+    guestList: GUESTS,
+    currentGuest: {}
+  }),
+  actions: {
+    setGuest(guest) {
+      this.currentGuest = guest
+    }
+  }
 })

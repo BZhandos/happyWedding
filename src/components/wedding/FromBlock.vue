@@ -1,6 +1,11 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, computed } from 'vue'
+import { useMainStore } from '@/stores/guests.js'
+const store = useMainStore()
 
+const guest = computed(() => {
+  return store.currentGuest
+})
 const currentWidth = ref(window.innerWidth)
 
 const setDefaultFlagsValues = () => {
@@ -17,21 +22,23 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="form-title">
-    <img alt="img" width="320" src="@/assets/text/form.svg" />
-  </div>
-  <div>
-    <div class="g-form">
-      <!--      <iframe-->
-      <!--        src="https://docs.google.com/forms/d/e/1FAIpQLSckifOqeP-UVhuASdWHIojNCQYJvYgZV5TCGaqnyfHtOaVBeg/viewform?embedded=true"-->
-      <!--        :width="currentWidth"-->
-      <!--        height="920"-->
-      <!--        frameborder="0"-->
-      <!--        marginheight="0"-->
-      <!--        marginwidth="0"-->
-      <!--      >-->
-      <!--        Загрузка…-->
-      <!--      </iframe>-->
+  <div v-if="guest.hash !== 'parents1'">
+    <div class="form-title">
+      <img alt="img" width="320" src="@/assets/text/form.svg" />
+    </div>
+    <div>
+      <div class="g-form">
+        <!--      <iframe-->
+        <!--        src="https://docs.google.com/forms/d/e/1FAIpQLSckifOqeP-UVhuASdWHIojNCQYJvYgZV5TCGaqnyfHtOaVBeg/viewform?embedded=true"-->
+        <!--        :width="currentWidth"-->
+        <!--        height="920"-->
+        <!--        frameborder="0"-->
+        <!--        marginheight="0"-->
+        <!--        marginwidth="0"-->
+        <!--      >-->
+        <!--        Загрузка…-->
+        <!--      </iframe>-->
+      </div>
     </div>
   </div>
 </template>
