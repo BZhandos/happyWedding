@@ -41,6 +41,21 @@ const GUESTS = {
     plus1: '-',
     hash: 'arai'
   },
+  almagul: {
+    name: 'Алмагул',
+    plus1: '-',
+    hash: 'almagul'
+  },
+  'mirass-amina': {
+    name: 'Мирас и Амина',
+    plus1: '-',
+    hash: ' miras'
+  },
+  'ayat-aidana': {
+    name: 'Аят и Айдана',
+    plus1: '-',
+    hash: ' ayat'
+  },
   // drugan: {
   //   name: 'Ельдар и Ардак',
   //   plus1: '-',
