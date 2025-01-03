@@ -31,6 +31,56 @@ const GUESTS = {
     plus1: '-',
     hash: 'drugan'
   },
+  'chingiz-asya': {
+    name: 'Чингиз и Асия',
+    plus1: '-',
+    hash: 'chingiz-asya'
+  },
+  arai: {
+    name: 'Арай',
+    plus1: '-',
+    hash: 'arai'
+  },
+  // drugan: {
+  //   name: 'Ельдар и Ардак',
+  //   plus1: '-',
+  //   hash: 'drugan'
+  // },
+  // drugan: {
+  //   name: 'Ельдар и Ардак',
+  //   plus1: '-',
+  //   hash: 'drugan'
+  // },
+  // drugan: {
+  //   name: 'Ельдар и Ардак',
+  //   plus1: '-',
+  //   hash: 'drugan'
+  // },
+  // drugan: {
+  //   name: 'Ельдар и Ардак',
+  //   plus1: '-',
+  //   hash: 'drugan'
+  // },
+  // drugan: {
+  //   name: 'Ельдар и Ардак',
+  //   plus1: '-',
+  //   hash: 'drugan'
+  // },
+  // drugan: {
+  //   name: 'Ельдар и Ардак',
+  //   plus1: '-',
+  //   hash: 'drugan'
+  // },
+  // drugan: {
+  //   name: 'Ельдар и Ардак',
+  //   plus1: '-',
+  //   hash: 'drugan'
+  // },
+  // drugan: {
+  //   name: 'Ельдар и Ардак',
+  //   plus1: '-',
+  //   hash: 'drugan'
+  // },
   'tori-iizumi': {
     name: 'Иизуми и Тори-чан',
     plus1: '-',
