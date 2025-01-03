@@ -1,4 +1,4 @@
-<script setup>
+<script setup xmlns="http://www.w3.org/1999/html">
 import { ref, computed, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { useMainStore } from '@/stores/guests'
@@ -72,12 +72,14 @@ function stopMusicHandler() {
     <div class="main-block__desc">
       <div class="background-image"></div>
       <div class="main-block__desc" v-if="guest.hash !== 'haba-san' && guest.hash !== 'aikawa-san'">
-        {{ guest.name }}
+        <span>{{ guest.name }}</span
+        ><br />
         Приглашаем вас на наше свадебное мероприятие разделить радость этого дня вместе с нами. We
         invite you to our wedding event to share the joy of this day with us.
       </div>
       <div class="main-block__desc" v-else>
-        {{ guest.name }}
+        <span>{{ guest.name }}</span
+        ><br />
         We invite you to our wedding event to share the joy of this day with us.
       </div>
     </div>
@@ -97,8 +99,15 @@ function stopMusicHandler() {
   margin: 0 auto;
   text-align: center;
   font-size: 22px;
-  max-width: 320px;
+  max-width: 420px;
 }
+.main-block__desc span {
+  font-size: 54px;
+  font-family: 'Waterfall', serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .background-image {
   position: absolute;
   top: 0;
