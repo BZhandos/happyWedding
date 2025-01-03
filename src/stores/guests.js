@@ -20,6 +20,21 @@ const GUESTS = {
     name: 'Санжар',
     plus1: '-',
     hash: 'chert'
+  },
+  'vladimir-merei': {
+    name: 'Владимир и Мерей',
+    plus1: '-',
+    hash: 'vladimir-merei'
+  },
+  drugan: {
+    name: 'Ельдар и Ардак',
+    plus1: '-',
+    hash: 'drugan'
+  },
+  'tori-iizumi': {
+    name: 'Иизуми и Тори-чан',
+    plus1: '-',
+    hash: 'tori-iizumi'
   }
 }
 //     [
