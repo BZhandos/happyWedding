@@ -1,5 +1,12 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { computed } from 'vue'
+import { useMainStore } from '@/stores/guests.js'
+const store = useMainStore()
+
+const guest = computed(() => {
+  return store.currentGuest
+})
 
 // Define the target date and time
 const targetDate = new Date('2025-05-03T15:30:00')
@@ -45,7 +52,13 @@ onBeforeUnmount(() => {
 <template>
   <div class="countdown-wrapper">
     <div class="count-title">
-      <img alt="img" width="320" src="@/assets/text/countdown.svg" />
+      <img
+        v-if="guest.hash !== 'haba-san' && guest.hash !== 'aikawa-san'"
+        alt="img"
+        width="320"
+        src="@/assets/text/countdown.svg"
+      />
+      <img v-else alt="img" width="320" src="@/assets/text/en_counter.svg" />
     </div>
     <div class="countdown-timer">
       <div class="countdown-timer__item">
@@ -62,7 +75,12 @@ onBeforeUnmount(() => {
       </div>
     </div>
     <div class="count-footer">
-      <img alt="img" src="@/assets/text/welcome_text.svg" />
+      <img
+        v-if="guest.hash !== 'haba-san' && guest.hash !== 'aikawa-san'"
+        alt="img"
+        src="@/assets/text/welcome_text.svg"
+      />
+      <img v-else alt="img" src="@/assets/text/en_wellcome.svg" />
     </div>
     <img src="@/assets/img/text-bg1.png" alt="Left Corner" class="countdown-wrapper-img left1" />
     <img src="@/assets/img/text-bg1.png" alt="Right Corner" class="countdown-wrapper-img right1" />

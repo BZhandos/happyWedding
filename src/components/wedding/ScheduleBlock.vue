@@ -1,4 +1,12 @@
 <script setup>
+import { computed } from 'vue'
+import { useMainStore } from '@/stores/guests.js'
+const store = useMainStore()
+
+const guest = computed(() => {
+  return store.currentGuest
+})
+
 const goToGoogleMap = () => {
   const address =
     'https://www.google.com/maps/place/Palazzo+Ducale+Azabu/@35.6642886,139.7299422,17z/data=!3m1!4b1!4m6!3m5!1s0x60188b78979ae66d:0x6a1186edb573ea50!8m2!3d35.6642886!4d139.7299422!16s%2Fg%2F1tk1z0jh?entry=ttu&g_ep=EgoyMDI0MTIwMS4xIKXMDSoASAFQAw%3D%3D'
@@ -9,7 +17,13 @@ const goToGoogleMap = () => {
 <template>
   <div class="schedule-container">
     <div class="schedule-title">
-      <img alt="img" width="265" src="@/assets/text/schedule.svg" />
+      <img
+        v-if="guest.hash !== 'haba-san' && guest.hash !== 'aikawa-san'"
+        alt="img"
+        width="265"
+        src="@/assets/text/schedule.svg"
+      />
+      <img v-else alt="img" width="265" src="@/assets/text/en_schedule.svg" />
     </div>
     <div class="plan-box">
       <div class="plan-box__item">
@@ -18,9 +32,21 @@ const goToGoogleMap = () => {
           <img class="plan-icon__img" alt="img" src="@/assets/planning/_1.png" />
         </div>
         <div class="plan-box__title">
-          <img alt="img" width="211" src="@/assets/text/guest.svg" />
+          <img
+            v-if="guest.hash !== 'haba-san' && guest.hash !== 'aikawa-san'"
+            alt="img"
+            width="211"
+            src="@/assets/text/guest.svg"
+          />
+          <img v-else alt="img" width="211" src="@/assets/text/en_guests.svg" />
         </div>
-        <div class="plan-box__dec" @click="goToGoogleMap">Japan, Tokyo, Roppongi-ku</div>
+        <div class="plan-box__dec">
+          Japan, Tokyo, Roppongi-ku <br />
+          <span class="plan-box__dec-link" @click="goToGoogleMap"
+            >Google map
+            <img alt="map" src="@/assets/img/map.png" />
+          </span>
+        </div>
         <div class="plan-box__time">14:30-15:00</div>
       </div>
       <div>
@@ -33,7 +59,13 @@ const goToGoogleMap = () => {
           <img class="plan-icon__img" alt="img" src="@/assets/planning/_2.png" />
         </div>
         <div class="plan-box__title">
-          <img alt="img" width="211" src="@/assets/text/reg.svg" />
+          <img
+            v-if="guest.hash !== 'haba-san' && guest.hash !== 'aikawa-san'"
+            alt="img"
+            width="211"
+            src="@/assets/text/reg.svg"
+          />
+          <img v-else alt="img" width="211" src="@/assets/text/en_registration.svg" />
         </div>
         <div class="plan-box__dec">Terrace</div>
         <div class="plan-box__time">15:30-16:30</div>
@@ -48,7 +80,13 @@ const goToGoogleMap = () => {
           <img class="plan-icon__img" alt="img" src="@/assets/planning/_3.png" />
         </div>
         <div class="plan-box__title">
-          <img alt="img" width="140" src="@/assets/text/banket.svg" />
+          <img
+            v-if="guest.hash !== 'haba-san' && guest.hash !== 'aikawa-san'"
+            alt="img"
+            width="140"
+            src="@/assets/text/banket.svg"
+          />
+          <img v-else alt="img" width="140" src="@/assets/text/en_banquet.svg" />
         </div>
         <div class="plan-box__dec">Main Hall under Sakura Tree</div>
         <div class="plan-box__time">16:30-21:00</div>
@@ -182,5 +220,20 @@ const goToGoogleMap = () => {
   .plan-box__title {
     margin: unset;
   }
+}
+.plan-box__dec-link {
+  text-decoration: underline;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.plan-box__dec-link:hover {
+  color: cornflowerblue;
+}
+
+.plan-box__dec-link img {
+  width: 24px;
 }
 </style>

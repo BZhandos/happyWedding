@@ -10,7 +10,13 @@ const guest = computed(() => {
 
 <template>
   <div class="code-title">
-    <img alt="img" width="265" src="@/assets/text/dress.svg" />
+    <img
+      v-if="guest.hash !== 'haba-san' && guest.hash !== 'aikawa-san'"
+      alt="img"
+      width="265"
+      src="@/assets/text/dress.svg"
+    />
+    <img v-else alt="img" width="265" src="@/assets/text/en_dress.svg" />
   </div>
   <template v-if="guest.hash !== 'haba-san' && guest.hash !== 'aikawa-san'">
     <div class="code-desc">Для нас главное - Ваше присутствие!</div>
