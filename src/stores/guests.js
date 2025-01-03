@@ -42,7 +42,7 @@ const GUESTS = {
     hash: 'arai'
   },
   almagul: {
-    name: 'Алмагул',
+    name: 'Алмагуль',
     plus1: '-',
     hash: 'almagul'
   },
