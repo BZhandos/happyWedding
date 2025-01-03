@@ -56,6 +56,26 @@ const GUESTS = {
     plus1: '-',
     hash: ' ayat'
   },
+  'olzhas-arai': {
+    name: 'Олжас и Арай',
+    plus1: '-',
+    hash: 'olzhas'
+  },
+  erni: {
+    name: 'Ернияз',
+    plus1: '-',
+    hash: 'erni'
+  },
+  danik: {
+    name: 'Данияр',
+    plus1: '-',
+    hash: 'danik'
+  },
+  esma: {
+    name: 'Есмахан',
+    plus1: '-',
+    hash: 'esma'
+  },
   // drugan: {
   //   name: 'Ельдар и Ардак',
   //   plus1: '-',
