@@ -19,7 +19,7 @@ const GUESTS = {
   chert: {
     name: 'Санжар',
     plus1: '-',
-    hash: 'parents1'
+    hash: 'chert'
   }
 }
 //     [

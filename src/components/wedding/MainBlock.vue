@@ -74,8 +74,7 @@ function stopMusicHandler() {
       <div class="main-block__desc" v-if="guest.hash !== 'haba-san' && guest.hash !== 'aikawa-san'">
         <span>{{ guest.name }}</span
         ><br />
-        Приглашаем вас на наше свадебное мероприятие разделить радость этого дня вместе с нами. We
-        invite you to our wedding event to share the joy of this day with us.
+        Приглашаем вас на наше свадебное мероприятие разделить радость этого дня вместе с нами.
       </div>
       <div class="main-block__desc" v-else>
         <span>{{ guest.name }}</span
