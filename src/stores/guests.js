@@ -15,6 +15,11 @@ const GUESTS = {
     name: 'Мурат и Мира',
     plus1: '-',
     hash: 'parents1'
+  },
+  chert: {
+    name: 'Санжар',
+    plus1: '-',
+    hash: 'parents1'
   }
 }
 //     [
