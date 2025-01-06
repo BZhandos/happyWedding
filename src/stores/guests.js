@@ -86,6 +86,16 @@ const GUESTS = {
     plus1: '-',
     hash: 'wedding'
   },
+  'askhat-zhazka': {
+    name: 'Асхат и Жазира',
+    plus1: '-',
+    hash: 'askhat-zhazka'
+  },
+  akihiro: {
+    name: 'Akihiro',
+    plus1: '-',
+    hash: 'akihiro'
+  },
   // drugan: {
   //   name: 'Ельдар и Ардак',
   //   plus1: '-',
