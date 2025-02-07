@@ -96,11 +96,16 @@ const GUESTS = {
     plus1: '-',
     hash: 'akihiro'
   },
-  // drugan: {
-  //   name: 'Ельдар и Ардак',
-  //   plus1: '-',
-  //   hash: 'drugan'
-  // },
+  umit: {
+    name: 'Үміт тате',
+    plus1: '-',
+    hash: 'umit'
+  },
+  apa: {
+    name: 'Ажека',
+    plus1: '-',
+    hash: 'umit'
+  },
   // drugan: {
   //   name: 'Ельдар и Ардак',
   //   plus1: '-',
