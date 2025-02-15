@@ -9,7 +9,10 @@ const guest = computed(() => {
 </script>
 
 <template>
-  <div class="details-container" v-if="guest.hash !== 'haba-san' && guest.hash !== 'aikawa-san'">
+  <div
+    class="details-container"
+    v-if="guest.hash !== 'haba-san' && guest.hash !== 'aikawa-san' && guest.hash !== 'akihiro'"
+  >
     <div class="details-title">
       <img alt="img" width="265" src="@/assets/text/details.svg" />
     </div>

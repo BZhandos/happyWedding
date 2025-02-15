@@ -11,14 +11,16 @@ const guest = computed(() => {
 <template>
   <div class="code-title">
     <img
-      v-if="guest.hash !== 'haba-san' && guest.hash !== 'aikawa-san'"
+      v-if="guest.hash !== 'haba-san' && guest.hash !== 'aikawa-san' && guest.hash !== 'akihiro'"
       alt="img"
       width="265"
       src="@/assets/text/dress.svg"
     />
     <img v-else alt="img" width="265" src="@/assets/text/en_dress.svg" />
   </div>
-  <template v-if="guest.hash !== 'haba-san' && guest.hash !== 'aikawa-san'">
+  <template
+    v-if="guest.hash !== 'haba-san' && guest.hash !== 'aikawa-san' && guest.hash !== 'akihiro'"
+  >
     <div class="code-desc">Для нас главное - Ваше присутствие!</div>
     <div class="code-desc">
       Но нам будет приятно, если Вы поддержите цветовую гамму нашего торжества!

@@ -22,7 +22,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div v-if="guest.hash !== 'haba-san' && guest.hash !== 'aikawa-san'">
+  <div v-if="guest.hash !== 'haba-san' && guest.hash !== 'aikawa-san' && guest.hash !== 'akihiro'">
     <div class="form-title">
       <img alt="img" width="320" src="@/assets/text/form.svg" />
     </div>

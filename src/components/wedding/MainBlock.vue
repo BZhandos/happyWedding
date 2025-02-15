@@ -71,7 +71,10 @@ function stopMusicHandler() {
 
     <div class="main-block__desc">
       <div class="background-image"></div>
-      <div class="main-block__desc" v-if="guest.hash !== 'haba-san' && guest.hash !== 'aikawa-san'">
+      <div
+        class="main-block__desc"
+        v-if="guest.hash !== 'haba-san' && guest.hash !== 'aikawa-san' && guest.hash !== 'akihiro'"
+      >
         <span style="font-size: 34px">{{ guest.name }}</span
         ><br />
         Приглашаем вас на наше свадебное мероприятие разделить радость этого дня вместе с нами.

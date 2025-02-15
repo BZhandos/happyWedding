@@ -53,7 +53,7 @@ onBeforeUnmount(() => {
   <div class="countdown-wrapper">
     <div class="count-title">
       <img
-        v-if="guest.hash !== 'haba-san' && guest.hash !== 'aikawa-san'"
+        v-if="guest.hash !== 'haba-san' && guest.hash !== 'aikawa-san' && guest.hash !== 'akihiro'"
         alt="img"
         width="320"
         src="@/assets/text/countdown.svg"
@@ -76,7 +76,7 @@ onBeforeUnmount(() => {
     </div>
     <div class="count-footer">
       <img
-        v-if="guest.hash !== 'haba-san' && guest.hash !== 'aikawa-san'"
+        v-if="guest.hash !== 'haba-san' && guest.hash !== 'aikawa-san' && guest.hash !== 'akihiro'"
         alt="img"
         src="@/assets/text/welcome_text.svg"
       />

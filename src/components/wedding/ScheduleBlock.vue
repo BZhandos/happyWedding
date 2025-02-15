@@ -18,7 +18,7 @@ const goToGoogleMap = () => {
   <div class="schedule-container">
     <div class="schedule-title">
       <img
-        v-if="guest.hash !== 'haba-san' && guest.hash !== 'aikawa-san'"
+        v-if="guest.hash !== 'haba-san' && guest.hash !== 'aikawa-san' && guest.hash !== 'akihiro'"
         alt="img"
         width="265"
         src="@/assets/text/schedule.svg"
@@ -33,7 +33,9 @@ const goToGoogleMap = () => {
         </div>
         <div class="plan-box__title">
           <img
-            v-if="guest.hash !== 'haba-san' && guest.hash !== 'aikawa-san'"
+            v-if="
+              guest.hash !== 'haba-san' && guest.hash !== 'aikawa-san' && guest.hash !== 'akihiro'
+            "
             alt="img"
             width="211"
             src="@/assets/text/guest.svg"
@@ -60,7 +62,9 @@ const goToGoogleMap = () => {
         </div>
         <div class="plan-box__title">
           <img
-            v-if="guest.hash !== 'haba-san' && guest.hash !== 'aikawa-san'"
+            v-if="
+              guest.hash !== 'haba-san' && guest.hash !== 'aikawa-san' && guest.hash !== 'akihiro'
+            "
             alt="img"
             width="211"
             src="@/assets/text/reg.svg"
@@ -81,7 +85,9 @@ const goToGoogleMap = () => {
         </div>
         <div class="plan-box__title">
           <img
-            v-if="guest.hash !== 'haba-san' && guest.hash !== 'aikawa-san'"
+            v-if="
+              guest.hash !== 'haba-san' && guest.hash !== 'aikawa-san' && guest.hash !== 'akihiro'
+            "
             alt="img"
             width="140"
             src="@/assets/text/banket.svg"
